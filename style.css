@@ -1,0 +1,7 @@
+#allPlayers {
+  display: flex;
+}
+.player {
+  border-width: 1px;
+  border-style: solid;
+}

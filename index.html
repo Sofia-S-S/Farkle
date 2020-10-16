@@ -6,6 +6,8 @@
     <title>Farkle</title>
     <!-- Add link to the jQuery Library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Added a link to our external stylesheet-->
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <!-- Btns for different combinations -->
@@ -25,34 +27,57 @@
     <button class="btn" value="1500">3 PAIRS</button>
     <button class="btn" value="1500">*4 + PAIR</button>
     <button class="btn" value="2500">TWO TRIPLETS</button>
-    <!--Player One-->
-    <button class="done" id="doneOne" value="0">Done</button>
-    <button class="farkle" id="farkleOne" value="0">Farkle</button>
-    <!--Player Two-->
-    <button class="done" id="doneTwo" value="0">Done</button>
-    <button class="farkle" id="farkleTwo" value="0">Farkle</button>
-    <!--Player Three-->
-    <button class="done" id="doneTree" value="0">Done</button>
-    <button class="farkle" id="farkleThree" value="0">Farkle</button>
-    <!--Player Three-->
-    <button class="done" id="doneFour" value="0">Done</button>
-    <button class="farkle" id="farkleFour" value="0">Farkle</button>
-    <!--Player Three-->
-    <button class="done" id="doneFive" value="0">Done</button>
-    <button class="farkle" id="farkleFive" value="0">Farkle</button>
-    <!--Player Three-->
-    <button class="done" id="doneSix" value="0">Done</button>
-    <button class="farkle" id="farkleSix" value="0">Farkle</button>
 
-    <!--Score display-->
+    <!-- All Players-->
+    <div id="allPlayers">
+      <!--Player One-->
+      <div class="player">
+        <h1>Player 1</h1>
+        <h1 id="scorePlOne">PL1</h1>
+        <button class="done" id="doneOne" value="0">Done</button>
+        <button class="farkle" id="farkleOne" value="0">Farkle</button>
+      </div>
+      <!--Player Two-->
+      <div class="player">
+        <h1>Player 2</h1>
+        <h1 id="scorePlTwo">PL2</h1>
+        <button class="done" id="doneTwo" value="0">Done</button>
+        <button class="farkle" id="farkleTwo" value="0">Farkle</button>
+      </div>
+      <!--Player Three-->
+      <div class="player">
+        <h1>Player 3</h1>
+        <h1 id="scorePlThree">PL3</h1>
+        <button class="done" id="doneThree" value="0">Done</button>
+        <button class="farkle" id="farkleThree" value="0">Farkle</button>
+      </div>
+      <!--Player Three-->
+      <div class="player">
+        <h1>Player 4</h1>
+        <h1 id="scorePlFour">PL4</h1>
+        <button class="done" id="doneFour" value="0">Done</button>
+        <button class="farkle" id="farkleFour" value="0">Farkle</button>
+      </div>
+      <!--Player Three-->
+      <div class="player">
+        <h1>Player 5</h1>
+        <h1 id="scorePlFive">PL5</h1>
+        <button class="done" id="doneFive" value="0">Done</button>
+        <button class="farkle" id="farkleFive" value="0">Farkle</button>
+      </div>
+      <!--Player Three-->
+      <div class="player">
+        <h1>Player 6</h1>
+        <h1 id="scorePlSix">PL6</h1>
+        <button class="done" id="doneSix" value="0">Done</button>
+        <button class="farkle" id="farkleSix" value="0">Farkle</button>
+      </div>
+    </div>
+
+    <!--Current Score display-->
     <h3 id="yourScore"></h3>
     <h1 id="totalScore"></h1>
-    <h1 id="scorePlOne">PL1</h1>
-    <h1 id="scorePlTwo">PL2</h1>
-    <h1 id="scorePlThree">PL3</h1>
-    <h1 id="scorePlFour">PL4</h1>
-    <h1 id="scorePlFive">PL5</h1>
-    <h1 id="scorePlSix">PL6</h1>
+
     <!--jQuery-->
     <script type="text/javascript">
       $(document).ready(function () {
@@ -89,10 +114,10 @@
             $("#yourScore").empty();
             $("#totalScore").empty();
             total = 0;
-          } else if (this.id === "doneTree") {
-            scorePlTree = scorePlTree + total;
+          } else if (this.id === "doneThree") {
+            scorePlThree = scorePlThree + total;
             // Display score
-            $("#scorePlTree").empty().prepend(`${scorePlTree}`);
+            $("#scorePlThree").empty().prepend(`${scorePlThree}`);
             $("#yourScore").empty();
             $("#totalScore").empty();
             total = 0;
