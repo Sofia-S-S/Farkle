@@ -25,46 +25,145 @@
     <button class="btn" value="1500">3 PAIRS</button>
     <button class="btn" value="1500">*4 + PAIR</button>
     <button class="btn" value="2500">TWO TRIPLETS</button>
-
-    <button id="done" value="0">Done</button>
-    <button id="farkle" value="0">Farkle</button>
+    <!--Player One-->
+    <button class="done" id="doneOne" value="0">Done</button>
+    <button class="farkle" id="farkleOne" value="0">Farkle</button>
+    <!--Player Two-->
+    <button class="done" id="doneTwo" value="0">Done</button>
+    <button class="farkle" id="farkleTwo" value="0">Farkle</button>
+    <!--Player Three-->
+    <button class="done" id="doneTree" value="0">Done</button>
+    <button class="farkle" id="farkleThree" value="0">Farkle</button>
+    <!--Player Three-->
+    <button class="done" id="doneFour" value="0">Done</button>
+    <button class="farkle" id="farkleFour" value="0">Farkle</button>
+    <!--Player Three-->
+    <button class="done" id="doneFive" value="0">Done</button>
+    <button class="farkle" id="farkleFive" value="0">Farkle</button>
+    <!--Player Three-->
+    <button class="done" id="doneSix" value="0">Done</button>
+    <button class="farkle" id="farkleSix" value="0">Farkle</button>
 
     <!--Score display-->
-    <h3 id="pOneScore"></h3>
+    <h3 id="yourScore"></h3>
     <h1 id="totalScore"></h1>
-    <h1 id="scoreSheet"></h1>
+    <h1 id="scorePlOne">PL1</h1>
+    <h1 id="scorePlTwo">PL2</h1>
+    <h1 id="scorePlThree">PL3</h1>
+    <h1 id="scorePlFour">PL4</h1>
+    <h1 id="scorePlFive">PL5</h1>
+    <h1 id="scorePlSix">PL6</h1>
     <!--jQuery-->
     <script type="text/javascript">
       $(document).ready(function () {
         var scoreThisRoll = 0;
         var total = 0;
-        var scoreSheet = 0;
-        // Btn click
+        var scorePlOne = 0;
+        var scorePlTwo = 0;
+        var scorePlThree = 0;
+        var scorePlFour = 0;
+        var scorePlFive = 0;
+        var scorePlSix = 0;
+        // Combinations' Btn click
         $(".btn").on("click", function () {
           scoreThisRoll = parseFloat(this.value);
           total = total + scoreThisRoll;
           console.log(scoreThisRoll, total);
           // Display score
-          $("#pOneScore").append(`<br>${scoreThisRoll}`);
+          $("#yourScore").append(`<br>${scoreThisRoll}`);
           $("#totalScore").empty().prepend(`${total}`);
         });
         // Done btn
-        $("#done").on("click", function () {
-          scoreSheet = scoreSheet + total;
-          // Display score
-          $("#scoreSheet").empty().prepend(`${scoreSheet}`);
-          $("#pOneScore").empty();
-          $("#totalScore").empty();
-          total = 0;
+        $(".done").on("click", function () {
+          if (this.id === "doneOne") {
+            scorePlOne = scorePlOne + total;
+            // Display score
+            $("#scorePlOne").empty().prepend(`${scorePlOne}`);
+            $("#yourScore").empty();
+            $("#totalScore").empty();
+            total = 0;
+          } else if (this.id === "doneTwo") {
+            scorePlTwo = scorePlTwo + total;
+            // Display score
+            $("#scorePlTwo").empty().prepend(`${scorePlTwo}`);
+            $("#yourScore").empty();
+            $("#totalScore").empty();
+            total = 0;
+          } else if (this.id === "doneTree") {
+            scorePlTree = scorePlTree + total;
+            // Display score
+            $("#scorePlTree").empty().prepend(`${scorePlTree}`);
+            $("#yourScore").empty();
+            $("#totalScore").empty();
+            total = 0;
+          } else if (this.id === "doneFour") {
+            scorePlFour = scorePlFour + total;
+            // Display score
+            $("#scorePlFour").empty().prepend(`${scorePlFour}`);
+            $("#yourScore").empty();
+            $("#totalScore").empty();
+            total = 0;
+          } else if (this.id === "doneFive") {
+            scorePlFive = scorePlFive + total;
+            // Display score
+            $("#scorePlFive").empty().prepend(`${scorePlFive}`);
+            $("#yourScore").empty();
+            $("#totalScore").empty();
+            total = 0;
+          } else {
+            scorePlSix = scorePlSix + total;
+            // Display score
+            $("#scorePlSix").empty().prepend(`${scorePlSix}`);
+            $("#yourScore").empty();
+            $("#totalScore").empty();
+            total = 0;
+          }
         });
         // Farkle btn
-        $("#farkle").on("click", function () {
-          total = 0;
-          scoreSheet = scoreSheet + total;
-          // Display score
-          $("#scoreSheet").empty().prepend(`${scoreSheet}`);
-          $("#pOneScore").empty();
-          $("#totalScore").empty();
+        $(".farkle").on("click", function () {
+          if (this.id === "farkleOne") {
+            total = 0;
+            scorePlOne = scorePlOne + total;
+            // Display score
+            $("#scorePlOne").empty().prepend(`${scorePlOne}`);
+            $("#yourScore").empty();
+            $("#totalScore").empty();
+          } else if (this.id === "farkleTwo") {
+            total = 0;
+            scorePlTwo = scorePlTwo + total;
+            // Display score
+            $("#scorePlTwo").empty().prepend(`${scorePlTwo}`);
+            $("#yourScore").empty();
+            $("#totalScore").empty();
+          } else if (this.id === "farkleThree") {
+            total = 0;
+            scorePlThree = scorePlThree + total;
+            // Display score
+            $("#scorePlThree").empty().prepend(`${scorePlThree}`);
+            $("#yourScore").empty();
+            $("#totalScore").empty();
+          } else if (this.id === "farkleFour") {
+            total = 0;
+            scorePlFour = scorePlFour + total;
+            // Display score
+            $("#scorePlFour").empty().prepend(`${scorePlFour}`);
+            $("#yourScore").empty();
+            $("#totalScore").empty();
+          } else if (this.id === "farkleFive") {
+            total = 0;
+            scorePlFive = scorePlFive + total;
+            // Display score
+            $("#scorePlFive").empty().prepend(`${scorePlFive}`);
+            $("#yourScore").empty();
+            $("#totalScore").empty();
+          } else {
+            total = 0;
+            scorePlSix = scorePlSix + total;
+            // Display score
+            $("#scorePlSix").empty().prepend(`${scorePlSix}`);
+            $("#yourScore").empty();
+            $("#totalScore").empty();
+          }
         });
       });
     </script>
