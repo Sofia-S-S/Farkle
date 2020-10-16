@@ -9,45 +9,62 @@
   </head>
   <body>
     <!-- Btns for different combinations -->
-    <button id="five" class="btn" value="50">X</button>
-    <button id="one" class="btn" value="100">I</button>
-    <button id="threeOnes" class="btn" value="300">I*3</button>
-    <button id="threeTwos" class="btn" value="400">II*3</button>
-    <button>III*3</button>
-    <button>IV*3</button>
-    <button>X*3</button>
-    <button>IV*3</button>
-    <button>V*3</button>
-    <button>VI*3</button>
-    <button>PAIR</button>
-    <button>ANY*4</button>
-    <button>ANY*5</button>
-    <button>ANY*6</button>
-    <button>I to XI</button>
-    <button>3 PAIRS</button>
-    <button>*4 + PAIR</button>
-    <button>TWO TRIPLETS</button>
+    <button class="btn" value="50">X</button>
+    <button class="btn" value="100">I</button>
+    <button class="btn" value="300">I*3</button>
+    <button class="btn" value="200">II*3</button>
+    <button class="btn" value="300">III*3</button>
+    <button class="btn" value="400">IV*3</button>
+    <button class="btn" value="500">V*3</button>
+    <button class="btn" value="600">VI*3</button>
+    <button class="btn" value="250">PAIR</button>
+    <button class="btn" value="1000">ANY*4</button>
+    <button class="btn" value="2000">ANY*5</button>
+    <button class="btn" value="3000">ANY*6</button>
+    <button class="btn" value="1500">I to XI</button>
+    <button class="btn" value="1500">3 PAIRS</button>
+    <button class="btn" value="1500">*4 + PAIR</button>
+    <button class="btn" value="2500">TWO TRIPLETS</button>
 
-    <button>Farkle</button>
-    <button>Roll</button>
-    <button>Done</button>
+    <button id="done" value="0">Done</button>
+    <button id="farkle" value="0">Farkle</button>
+
     <!--Score display-->
-    <h1 id="yourScore"></h1>
+    <h3 id="pOneScore"></h3>
     <h1 id="totalScore"></h1>
+    <h1 id="scoreSheet"></h1>
     <!--jQuery-->
     <script type="text/javascript">
       $(document).ready(function () {
-        var score = 0;
+        var scoreThisRoll = 0;
         var total = 0;
-
+        var scoreSheet = 0;
         // Btn click
         $(".btn").on("click", function () {
-          score = parseFloat(this.value);
-          total = total + score;
-          console.log(score, total);
+          scoreThisRoll = parseFloat(this.value);
+          total = total + scoreThisRoll;
+          console.log(scoreThisRoll, total);
           // Display score
-          $("#yourScore").prepend(`<br>${score}`);
+          $("#pOneScore").append(`<br>${scoreThisRoll}`);
           $("#totalScore").empty().prepend(`${total}`);
+        });
+        // Done btn
+        $("#done").on("click", function () {
+          scoreSheet = scoreSheet + total;
+          // Display score
+          $("#scoreSheet").empty().prepend(`${scoreSheet}`);
+          $("#pOneScore").empty();
+          $("#totalScore").empty();
+          total = 0;
+        });
+        // Farkle btn
+        $("#farkle").on("click", function () {
+          total = 0;
+          scoreSheet = scoreSheet + total;
+          // Display score
+          $("#scoreSheet").empty().prepend(`${scoreSheet}`);
+          $("#pOneScore").empty();
+          $("#totalScore").empty();
         });
       });
     </script>
