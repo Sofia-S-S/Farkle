@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Farkle</title>
+    <!-- Add link to the jQuery Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <!-- Btns for different combinations -->
+    <button id="five" class="btn" value="50">X</button>
+    <button id="one" class="btn" value="100">I</button>
+    <button id="threeOnes" class="btn" value="300">I*3</button>
+    <button id="threeTwos" class="btn" value="400">II*3</button>
+    <button>III*3</button>
+    <button>IV*3</button>
+    <button>X*3</button>
+    <button>IV*3</button>
+    <button>V*3</button>
+    <button>VI*3</button>
+    <button>PAIR</button>
+    <button>ANY*4</button>
+    <button>ANY*5</button>
+    <button>ANY*6</button>
+    <button>I to XI</button>
+    <button>3 PAIRS</button>
+    <button>*4 + PAIR</button>
+    <button>TWO TRIPLETS</button>
+
+    <button>Farkle</button>
+    <button>Roll</button>
+    <button>Done</button>
+    <!--Score display-->
+    <h1 id="yourScore"></h1>
+    <h1 id="totalScore"></h1>
+    <!--jQuery-->
+    <script type="text/javascript">
+      $(document).ready(function () {
+        var score = 0;
+        var total = 0;
+
+        // Btn click
+        $(".btn").on("click", function () {
+          score = parseFloat(this.value);
+          total = total + score;
+          console.log(score, total);
+          // Display score
+          $("#yourScore").prepend(`<br>${score}`);
+          $("#totalScore").empty().prepend(`${total}`);
+        });
+      });
+    </script>
+  </body>
+</html>
