@@ -7,76 +7,196 @@
     <!-- Add link to the jQuery Library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- Added a link to our external stylesheet and script-->
+    <link rel="stylesheet" href="./normalize.css" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    
+    <!--Dive combination btns and current roll score-->
+    <div class="gameRound">
     <!-- Btns for different combinations -->
-    <button class="btn" value="50">X</button>
-    <button class="btn" value="100">I</button>
-    <button class="btn" value="300">I*3</button>
-    <button class="btn" value="200">II*3</button>
-    <button class="btn" value="300">III*3</button>
-    <button class="btn" value="400">IV*3</button>
-    <button class="btn" value="500">V*3</button>
-    <button class="btn" value="600">VI*3</button>
-    <button class="btn" value="250">PAIR</button>
-    <button class="btn" value="1000">ANY*4</button>
-    <button class="btn" value="2000">ANY*5</button>
-    <button class="btn" value="3000">ANY*6</button>
-    <button class="btn" value="1500">I to XI</button>
-    <button class="btn" value="1500">3 PAIRS</button>
-    <button class="btn" value="1500">*4 + PAIR</button>
-    <button class="btn" value="2500">TWO TRIPLETS</button>
+    <div class = "diceBlock">
+    <div class="diceSideTop">
+    <button class="btn" value="50">
+      <img class="dice" src="./dice-five-solid.svg" ></img>
+    </button>
+    <button class="btn" value="100">
+      <img class="dice" src="./dice-one-solid.svg" ></img>
+    </button> 
+   
+  </div>
+  <div class="diceSideLeftAndRight">
+  <div class="sideLeft">
+       <button class="btn" value="300">
+      <img class="dice" src="./dice-one-solid.svg" ></img>
+      <img class="dice" src="./dice-one-solid.svg" ></img>
+      <img class="dice" src="./dice-one-solid.svg" ></img>
+    </button>
+    <br>
+    <button class="btn" value="200">
+      <img class="dice" src="./dice-two-solid.svg" ></img>
+      <img class="dice" src="./dice-two-solid.svg" ></img>
+      <img class="dice" src="./dice-two-solid.svg" ></img>
+    </button>
+    <br>
+    <button class="btn" value="300">
+      <img class="dice" src="./dice-three-solid.svg" ></img>
+      <img class="dice" src="./dice-three-solid.svg" ></img>
+      <img class="dice" src="./dice-three-solid.svg" ></img>
+    </button>  
+    <br>
+    <button class="btn" value="400">
+      <img class="dice" src="./dice-four-solid.svg" ></img>
+      <img class="dice" src="./dice-four-solid.svg" ></img>
+      <img class="dice" src="./dice-four-solid.svg" ></img>
+    </button>
+    <br>
+    <button class="btn" value="500">
+      <img class="dice" src="./dice-five-solid.svg" ></img>
+      <img class="dice" src="./dice-five-solid.svg" ></img>
+      <img class="dice" src="./dice-five-solid.svg" ></img>
+    </button>
+    <br>
+    <button class="btn" value="600">
+      <img class="dice" src="./dice-six-solid.svg" ></img>
+      <img class="dice" src="./dice-six-solid.svg" ></img>
+      <img class="dice" src="./dice-six-solid.svg" ></img>
+    </button>
+    <br>
+   
+    <button class="btn" id="pair" value="250">
+      <img class="dice" src="./dice-two-solid.svg" ></img>
+      <img class="dice" src="./dice-two-solid.svg" ></img>
+    </button> 
+    
+</div>
+<div class="diceSideRight">
+    <button class="btn" value="1000">
+      <img class="dice" src="./dice-four-solid.svg" ></img>
+      <img class="dice" src="./dice-four-solid.svg" ></img>
+      <img class="dice" src="./dice-four-solid.svg" ></img>
+      <img class="dice" src="./dice-four-solid.svg" ></img>
+    </button>
+    <br>
+    <button class="btn" value="2000">
+      <img class="dice" src="./dice-five-solid.svg" ></img>
+      <img class="dice" src="./dice-five-solid.svg" ></img>
+      <img class="dice" src="./dice-five-solid.svg" ></img>
+      <img class="dice" src="./dice-five-solid.svg" ></img>
+      <img class="dice" src="./dice-five-solid.svg" ></img>
+    </button>
+    <br>
+    <button class="btn" value="3000">
+      <img class="dice" src="./dice-six-solid.svg" ></img>
+      <img class="dice" src="./dice-six-solid.svg" ></img>
+      <img class="dice" src="./dice-six-solid.svg" ></img>
+      <img class="dice" src="./dice-six-solid.svg" ></img>
+      <img class="dice" src="./dice-six-solid.svg" ></img>
+      <img class="dice" src="./dice-six-solid.svg" ></img>
+    </button>
+    <br>
+    <button class="btn" value="1500">
+      <img class="dice" src="./dice-one-solid.svg" ></img>
+      <img class="dice" src="./dice-two-solid.svg" ></img>
+      <img class="dice" src="./dice-three-solid.svg" ></img>
+      <img class="dice" src="./dice-four-solid.svg" ></img>
+      <img class="dice" src="./dice-five-solid.svg" ></img>
+      <img class="dice" src="./dice-six-solid.svg" ></img>
+    </button>
+    <br>
+    <button class="btn" value="1500">
+      <img class="dice" src="./dice-one-solid.svg" ></img>
+      <img class="dice" src="./dice-one-solid.svg" ></img>
+      <img class="dice" src="./dice-two-solid.svg" ></img>
+      <img class="dice" src="./dice-two-solid.svg" ></img>
+      <img class="dice" src="./dice-three-solid.svg" ></img>
+      <img class="dice" src="./dice-three-solid.svg" ></img>
+    </button>
+    <br>
+    <button class="btn" value="1500">
+      <img class="dice" src="./dice-four-solid.svg" ></img>
+      <img class="dice" src="./dice-four-solid.svg" ></img>
+      <img class="dice" src="./dice-four-solid.svg" ></img>
+      <img class="dice" src="./dice-four-solid.svg" ></img>
+      <img class="dice" src="./dice-two-solid.svg" ></img>
+      <img class="dice" src="./dice-two-solid.svg" ></img>
+    </button>
+    <br>
+    <button class="btn" value="2500">
+      <img class="dice" src="./dice-one-solid.svg" ></img>
+      <img class="dice" src="./dice-one-solid.svg" ></img>
+      <img class="dice" src="./dice-one-solid.svg" ></img>
+      <img class="dice" src="./dice-two-solid.svg" ></img>
+      <img class="dice" src="./dice-two-solid.svg" ></img>
+      <img class="dice" src="./dice-two-solid.svg" ></img>
+    </button>
+  </div>
+</div>
+</div>
+    <!--Current Score display-->
+    <div class="scoreWrap">
+      <div class="scoreBlock">
+         <h2 id="yourScore"></h2>
+          <div class="total">
+          <h1>Total: </h1>
+          <h1 id="totalScore"></h1>
+          <button class="delete"><img class="del" src="./times-circle-regular.svg" ></img></button>
+         </div>
+      </div>
+      <div class="gameName"><h1>Farkle  </h1></div>
+    </div>
+    
+</div>
+
 
     <!-- All Players-->
-    <div id="allPlayers">
+    <div class="allPlayers">
       <!--Player One-->
       <div class="player">
-        <h1>Player 1</h1>
-        <h1 id="scorePlOne">PL1</h1>
-        <button class="done" id="doneOne" value="0">Done</button>
-        <button class="farkle" id="farkleOne" value="0">Farkle</button>
+        <h1 class="plNum">Player 1</h1>
+        <h1 clsss="pl" id="scorePlOne">--</h1>
+        <button class="done" id="doneOne" value="0"><img class="dice" src="./check-circle-regular.svg" ></img></button>
+        <button class="farkle" id="farkleOne" value="0"><img class="dice" src="./dizzy-solid.svg" ></img></button>
       </div>
       <!--Player Two-->
       <div class="player">
-        <h1>Player 2</h1>
-        <h1 id="scorePlTwo">PL2</h1>
-        <button class="done" id="doneTwo" value="0">Done</button>
-        <button class="farkle" id="farkleTwo" value="0">Farkle</button>
+        <h1 class="plNum">Player 2</h1>
+        <h1 clsss="pl" id="scorePlTwo">--</h1>
+        <button class="done" id="doneTwo" value="0"><img class="dice" src="./check-circle-regular.svg" ></img></button>
+        <button class="farkle" id="farkleTwo" value="0"><img class="dice" src="./dizzy-solid.svg" ></img></button>
       </div>
       <!--Player Three-->
       <div class="player">
-        <h1>Player 3</h1>
-        <h1 id="scorePlThree">PL3</h1>
-        <button class="done" id="doneThree" value="0">Done</button>
-        <button class="farkle" id="farkleThree" value="0">Farkle</button>
+        <h1 class="plNum">Player 3</h1>
+        <h1 clsss="pl" id="scorePlThree">--</h1>
+        <button class="done" id="doneThree" value="0"><img class="dice" src="./check-circle-regular.svg" ></img></button>
+        <button class="farkle" id="farkleThree" value="0"><img class="dice" src="./dizzy-solid.svg" ></img></button>
       </div>
       <!--Player Three-->
       <div class="player">
-        <h1>Player 4</h1>
-        <h1 id="scorePlFour">PL4</h1>
-        <button class="done" id="doneFour" value="0">Done</button>
-        <button class="farkle" id="farkleFour" value="0">Farkle</button>
+        <h1 class="plNum">Player 4</h1>
+        <h1 clsss="pl" id="scorePlFour">--</h1>
+        <button class="done" id="doneFour" value="0"><img class="dice" src="./check-circle-regular.svg" ></img></button>
+        <button class="farkle" id="farkleFour" value="0"><img class="dice" src="./dizzy-solid.svg" ></img></button>
       </div>
       <!--Player Three-->
       <div class="player">
-        <h1>Player 5</h1>
-        <h1 id="scorePlFive">PL5</h1>
-        <button class="done" id="doneFive" value="0">Done</button>
-        <button class="farkle" id="farkleFive" value="0">Farkle</button>
+        <h1 class="plNum">Player 5</h1>
+        <h1 clsss="pl" id="scorePlFive">--</h1>
+        <button class="done" id="doneFive" value="0"><img class="dice" src="./check-circle-regular.svg" ></img></button>
+        <button class="farkle" id="farkleFive" value="0"><img class="dice" src="./dizzy-solid.svg" ></img></button>
       </div>
       <!--Player Three-->
       <div class="player">
-        <h1>Player 6</h1>
-        <h1 id="scorePlSix">PL6</h1>
-        <button class="done" id="doneSix" value="0">Done</button>
-        <button class="farkle" id="farkleSix" value="0">Farkle</button>
+        <h1 class="plNum">Player 6</h1>
+        <h1 clsss="pl" id="scorePlSix">--</h1>
+        <button class="done" id="doneSix" value="0"><img class="dice" src="./check-circle-regular.svg" ></img></button>
+        <button class="farkle" id="farkleSix" value="0"><img class="dice" src="./dizzy-solid.svg" ></img></button>
       </div>
     </div>
-
-    <!--Current Score display-->
-    <h3 id="yourScore"></h3>
-    <h1 id="totalScore"></h1>
+  
+    <!--Button-->
+  
 
     <script src="./app.js"></script>
   </body>

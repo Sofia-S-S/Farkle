@@ -110,4 +110,10 @@ $(document).ready(function () {
       $("#totalScore").empty();
     }
   });
+  // Farkle btn
+  $(".delete").on("click", function () {
+    total = 0;
+    $("#yourScore").empty();
+    $("#totalScore").empty();
+  });
 });
