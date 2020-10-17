@@ -16,15 +16,17 @@
     <div class="gameRound">
     <!-- Btns for different combinations -->
     <div class = "diceBlock">
-    <div class="diceSideTop">
-    <button class="btn" value="50">
-      <img class="dice" src="./dice-five-solid.svg" ></img>
-    </button>
-    <button class="btn" value="100">
+     
+      <div class="diceSideTop">
+           <button class="btn" value="50">
+             <img class="dice" src="./dice-five-solid.svg" ></img>
+      </button>
+        <button class="btn" value="100">
       <img class="dice" src="./dice-one-solid.svg" ></img>
-    </button> 
-   
-  </div>
+      </button> 
+     
+      </div>
+
   <div class="diceSideLeftAndRight">
   <div class="sideLeft">
        <button class="btn" value="300">
@@ -134,7 +136,7 @@
 </div>
 </div>
     <!--Current Score display-->
-    <div class="scoreWrap">
+    
       <div class="scoreBlock">
          <h2 id="yourScore"></h2>
           <div class="total">
@@ -143,7 +145,7 @@
           <button class="delete"><img class="del" src="./times-circle-regular.svg" ></img></button>
          </div>
       </div>
-      <div class="gameName"><h1>Farkle  </h1></div>
+      
     </div>
     
 </div>
@@ -194,6 +196,7 @@
         <button class="farkle" id="farkleSix" value="0"><img class="dice" src="./dizzy-solid.svg" ></img></button>
       </div>
     </div>
+    <div class="gameName"><h1>=^.^= Farkle =^.^=  </h1></div>
   
     <!--Button-->
   
@@ -202,19 +205,20 @@
     <style>
       body {
   background-color: #3e8e41;
-  font-style: oblique;
+  font-style: italic;
 }
 .gameName {
-  font-style: italic;
-  color: #3e8e41;
-  font-size: 20px;
-  text-align: right;
-  padding-right: 15px;
-  position: relative;
+  /* color: #3e8e41; */
+  width: 100%;
+  text-align: center;
+  font-size: 26px;
 }
 .dice {
   width: 35px;
   height: 35px;
+}
+.diceSideTop {
+  display: flex;
 }
 .gameRound {
   display: flex;
@@ -223,15 +227,15 @@
   border-radius: 15px;
   background: #ecf789;
 }
-.scoreWrap {
+.test {
   display: flex;
-  width: 40%;
 }
+
 .scoreBlock {
-  width: 100%;
+  width: 25%;
 }
 .diceBlock {
-  width: 60%;
+  width: 75%;
 }
 .total {
   display: flex;
@@ -240,6 +244,15 @@
 }
 #totalScore {
   color: #e73950;
+}
+.diceSideLeftAndRight {
+  display: flex;
+}
+.plNum {
+  color: #3e8e41;
+}
+.pl {
+  color: rgb(19, 18, 18);
 }
 
 /*Players' boxes*/
@@ -264,15 +277,6 @@
 }
 .player:hover {
   background-color: rgba(212, 113, 56, 0.931);
-}
-.diceSideLeftAndRight {
-  display: flex;
-}
-.plNum {
-  color: #3e8e41;
-}
-.pl {
-  color: rgb(19, 18, 18);
 }
 
 /* Combinations' Buttons*/
