@@ -1,19 +1,6 @@
 // jQuery
 
 $(document).ready(function () {
-  var pl1 = prompt("First Player");
-  var pl2 = prompt("Srcond Player");
-  var pl3 = prompt("Third Player");
-  var pl4 = prompt("Fourth Player");
-  var pl5 = prompt("Fifth Player");
-  var pl6 = prompt("Sixth Player");
-          
-  $("#p1").append(`${pl1}`);
-  $("#p2").append(`${pl2}`);
-  $("#p3").append(`${pl3}`);
-  $("#p4").append(`${pl4}`);
-  $("#p5").append(`${pl5}`);
-  $("#p6").append(`${pl6}`);
   
   var scoreThisRoll = 0;
   var total = 0;
