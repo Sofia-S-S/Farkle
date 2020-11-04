@@ -204,13 +204,15 @@
     <script src="./app.js"></script>
     <style>
       body {
+        display:flex;
+        flex-direction: column;
   background-color: #3e8e41;
   font-style: italic;
 }
 .gameName {
-  /* color: #3e8e41; */
-  width: 100%;
-  text-align: center;
+  
+  display: flex;
+  justify-content: center;
   font-size: 26px;
 }
 .dice {
@@ -226,17 +228,10 @@
   padding: 15px;
   border-radius: 15px;
   background: #ecf789;
-}
-.test {
-  display: flex;
+  justify-content: space-between;
 }
 
-.scoreBlock {
-  width: 25%;
-}
-.diceBlock {
-  width: 75%;
-}
+
 .total {
   display: flex;
 
@@ -258,12 +253,13 @@
 /*Players' boxes*/
 .allPlayers {
   display: flex;
+  justify-content: space-between;
 }
 .player {
   border-radius: 15px;
   margin: 5px;
   padding: 5px 15px;
-  width: 16.6%;
+
 
   font-size: 20px;
   text-align: center;
@@ -365,7 +361,27 @@
   width: 35px;
   height: 35px;
 }
+@media only screen and (max-width: 900px){
 
+.allPlayers {
+  flex-wrap:wrap;
+}
+.player{
+  float: left;
+}
+.diceBlock{
+  width: 100%;
+}
+@media only screen and (max-width: 700px){
+  .gameRound{
+    flex-wrap:wrap;
+  }
+  .gameName {
+
+  font-size: 24px;
+}
+}
+}
     </style>
   </body>
 </html>
