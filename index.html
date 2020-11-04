@@ -154,43 +154,43 @@
     <!-- All Players-->
     <div class="allPlayers">
       <!--Player One-->
-      <div class="player">
-        <h1 class="plNum">Player 1</h1>
+      <div class="player" >
+        <h1 class="plNum" id="p1"></h1>
         <h1 clsss="pl" id="scorePlOne">--</h1>
         <button class="done" id="doneOne" value="0"><img class="dice" src="./check-circle-regular.svg" ></img></button>
         <button class="farkle" id="farkleOne" value="0"><img class="dice" src="./dizzy-solid.svg" ></img></button>
       </div>
       <!--Player Two-->
       <div class="player">
-        <h1 class="plNum">Player 2</h1>
+        <h1 class="plNum" id="p2"></h1>
         <h1 clsss="pl" id="scorePlTwo">--</h1>
         <button class="done" id="doneTwo" value="0"><img class="dice" src="./check-circle-regular.svg" ></img></button>
         <button class="farkle" id="farkleTwo" value="0"><img class="dice" src="./dizzy-solid.svg" ></img></button>
       </div>
       <!--Player Three-->
       <div class="player">
-        <h1 class="plNum">Player 3</h1>
+        <h1 class="plNum" id="p3"></h1>
         <h1 clsss="pl" id="scorePlThree">--</h1>
         <button class="done" id="doneThree" value="0"><img class="dice" src="./check-circle-regular.svg" ></img></button>
         <button class="farkle" id="farkleThree" value="0"><img class="dice" src="./dizzy-solid.svg" ></img></button>
       </div>
       <!--Player Three-->
       <div class="player">
-        <h1 class="plNum">Player 4</h1>
+        <h1 class="plNum" id="p4"></h1>
         <h1 clsss="pl" id="scorePlFour">--</h1>
         <button class="done" id="doneFour" value="0"><img class="dice" src="./check-circle-regular.svg" ></img></button>
         <button class="farkle" id="farkleFour" value="0"><img class="dice" src="./dizzy-solid.svg" ></img></button>
       </div>
       <!--Player Three-->
       <div class="player">
-        <h1 class="plNum">Player 5</h1>
+        <h1 class="plNum"id="p5"></h1>
         <h1 clsss="pl" id="scorePlFive">--</h1>
         <button class="done" id="doneFive" value="0"><img class="dice" src="./check-circle-regular.svg" ></img></button>
         <button class="farkle" id="farkleFive" value="0"><img class="dice" src="./dizzy-solid.svg" ></img></button>
       </div>
       <!--Player Three-->
       <div class="player">
-        <h1 class="plNum">Player 6</h1>
+        <h1 class="plNum"id="p6"></h1>
         <h1 clsss="pl" id="scorePlSix">--</h1>
         <button class="done" id="doneSix" value="0"><img class="dice" src="./check-circle-regular.svg" ></img></button>
         <button class="farkle" id="farkleSix" value="0"><img class="dice" src="./dizzy-solid.svg" ></img></button>
@@ -260,7 +260,7 @@
   margin: 5px;
   padding: 5px 15px;
 
-
+  width:100%;
   font-size: 20px;
   text-align: center;
   cursor: pointer;
@@ -367,6 +367,7 @@
   flex-wrap:wrap;
 }
 .player{
+  width: auto;
   float: left;
 }
 .diceBlock{
@@ -380,6 +381,7 @@
 
   font-size: 24px;
 }
+
 }
 }
     </style>
